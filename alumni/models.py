@@ -6,8 +6,19 @@ from django_markdown.models import MarkdownField
 
 class Alumni(models.Model):
 
-    CHOICES = (('YES', True),
-              ('No', False)
+    CHOICES = (('Encore', 'Encore'),
+              ('Coding Club', 'Coding Club'),
+              ('Masquerade', 'Masquerade'),
+              ('Mod5', 'Mod5'),
+              ('Shades', 'Shades'),
+              ('Arcadia', 'Arcadia'),
+              ('DOT', 'DOT'),
+              ('Enigma', 'Enigma'),
+              ('Sports Committee', 'Sports Committee'),
+              ('Cultural Committee', 'Cultural Committee'),
+              ('Technical Committee', 'Technical Committee'),
+              ('Literature Committee', 'Literature Committee'),
+
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     rollno = models.CharField(max_length = 9)
@@ -23,4 +34,4 @@ class Alumni(models.Model):
     facebook = models.URLField(null=True, blank=True)
     twitter = models.URLField(null=True, blank=True)
 
-    clubs = models.CharField(max_length = 300, blank=True)
+    clubs = models.CharField(max_length = 300, blank=True, choices=CHOICES)
