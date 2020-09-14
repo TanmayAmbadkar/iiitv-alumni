@@ -1,6 +1,7 @@
 ## Alumni Portal for IIIT Vadodara
 
-This will be the alumni portal for IIIT Vadodara
+This will be backend for the alumni portal for IIIT Vadodara
+The backend is currently in Django 3.1
 
 ___
 ## Setup
